@@ -1,24 +1,29 @@
-const input = document.getElementById('input');
-const tasklist = document.getElementById('tasklist');
-const btn = document.getElementById('task');
-btn.addEventListener('click',function(){
-const values = input.value.trim();
-if(values==='')return;
-if(values){
-    tasklist.innerHTML+=`
-    <div class="first">${values}</div>
-    <button onclick="deleteTask(this)">Delete</button>
-    `
-    input.value = '';
-}
+let div = document.createElement('div');
+div.id = 'container';
+const h1 = document.createElement('h1');
+h1.innerText = 'Otp Generator';
+div.appendChild(h1);
 
+const button = document.createElement('button');
+button.id='btn';
+button.innerHTML = 'Generate OTP';
+const input = document.createElement('input');
+input.id = 'otp';
+input.type= 'number';
+input.placeholder = 'Enter OTP';
+div.appendChild(input);
+div.appendChild(button);
+document.body.appendChild(div);
+//Interaction of otp
 
-})
-function deleteTask(button) {
+const button1 = document.getElementById('btn');
+button1.addEventListener('click',function(){
+    const number = Math.floor(Math.random()*1000000);
+    const inputValue = document.getElementById('otp');
+    const p = document.createElement('p');
+    p.id='value';
+    p.innerHTML = 'Generated OTP is :' + number;
+    div.appendChild(p);
     
-}function deleteTask(button) {
-    button.parentElement.style.display = "none";
-}
-function completeTask(taskDiv) {
-    taskDiv.classList.toggle("completed");
-}
+})
+
