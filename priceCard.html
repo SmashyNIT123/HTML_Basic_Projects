@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background: linear-gradient(to right, #9a9d78, #2c2c2c);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.price, .premium{
+    width:260px;
+    background: darkblue;
+    border-radius: 20px;
+    color:white;
+    padding:25px;
+    text-align:center;
+    transition: 0.3s;
+}
+
+.premium{
+    background: rgb(5, 5, 108);
+    border: 3px solid gold;
+
+}
+
+.price:hover, .premium:hover{
+    transform: scale(1.05);
+}
+
+ul{
+    padding:0;
+}
+
+li{
+    list-style: none;
+    margin:10px 0;
+}
+
+.g-tick{
+    background: green;
+    border-radius: 50%;
+    padding:3px 6px;
+    margin-right:8px;
+}
+
+.r-tick{
+    background: red;
+    border-radius: 50%;
+    padding:3px 6px;
+    margin-right:8px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    background: orange;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background: darkorange;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="price">
+            <h3><strong>Express Edge</strong></h3>
+            <h4>For news lovers</h4>
+            <hr>
+            <p>Plan starts from</p>
+            <h3>Rs.3.54/day</h3>
+            <button class="subscribe">Subscribe Now</button>
+            <br>
+            <br>
+            <hr>
+            <ul>
+            <li><span class="g-tick">&#10004;</span><strong>Daily E-paper</strong></li>
+            <li><span class="g-tick">&#10004;</span>Premium Stories and archieves</li>
+            <li><span class="g-tick"> &#10004;</span> Lite Experience</li>
+            <li><span class="g-tick">&#10004;</span>Daily Crossword and Sodoku</li>
+            <li><span class="r-tick">&#10008;</span>UPSC Section + Quiz</li>
+            <li><span class="r-tick">&#10008;</span>UPSC Essential</li>
+        </ul>
+           
+        </div>
+        
+        
+        <div class="premium">
+            <h3><strong>UPSC Pack</strong></h3>
+            <h3>For competitive exam aspirants</h3>
+            <hr>
+            <p>Plan starts from</p>
+            <h3>Rs.4.17/day</h3>
+            <button class="subscribe">Subscribe Now</button>
+            <br>
+            <br>
+            <hr>
+            <ul>
+                <li><span class="g-tick">&#10004;</span><strong>Daily E-paper</strong></li>
+                <li><span class="g-tick">&#10004;</span>Premium Stories and archieves</li>
+                <li><span class="g-tick">&#10004;</span>Lite Experience</li>
+                <li><span class="g-tick">&#10004;</span>Daily Crossword and Sodoku</li>
+                <li><span class="g-tick">&#10004;</span>UPSC Section + Quiz</li>
+                <li><span class="g-tick">&#10004;</span>UPSC Essential</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll(".subscribe").forEach(btn => {
+    btn.addEventListener("click", () => {
+        alert("Subscribed successfully!");
+    });
+});
+    </script>
+   
+</body>
+</html>
